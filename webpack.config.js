@@ -1,7 +1,20 @@
 module.exports = {
-    entry: ['./src/entry/a.js','./src/entry/b.js','./src/entry/c.js'],
-    output: {
-        filename: '[name].js',
-        path: `${process.cwd()}/src` // 输出目录`path`的绝对路径
-    }
+  entry: {
+    a: "./src/entry/a.js",
+    b: "./src/entry/b.js",
+    c: "./src/entry/c.js",
+    d: "./src/entry/d.js"
+  },
+  output: {
+    filename: "[name].js",
+    path: `${__dirname}/dist` // 输出目录`path`的绝对路径
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      }
+    ]
+  }
 };

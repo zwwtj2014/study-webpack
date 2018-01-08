@@ -1,1 +1,1 @@
-console.log('inner a.js');
+console.log("inner a.js");
