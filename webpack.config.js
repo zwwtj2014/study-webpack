@@ -1,3 +1,7 @@
+const ConsoleLogOnBuildWebpackPlugin = require("./plugins/consolelog-onbuildwebpack-plugin/ConsoleLogOnBuildWebpackPlugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const Webpack = require("webpack");
+
 module.exports = {
   entry: {
     a: "./src/entry/a.js",
@@ -16,5 +20,12 @@ module.exports = {
         use: ["style-loader", "css-loader"]
       }
     ]
-  }
+  },
+  plugins: [
+    new Webpack.optimize.UglifyJsPlugin(),
+    new ConsoleLogOnBuildWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html"
+    })
+  ]
 };
