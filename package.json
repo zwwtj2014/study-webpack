@@ -4,7 +4,8 @@
   "description": "webpack log",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:target": "webpack --config target/webpack.config.js --colors"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,12 @@
   },
   "homepage": "https://github.com/zwwtj2014/study-webpack#readme",
   "dependencies": {
-    "webpack": "^3.10.0"
+    "lodash": "^4.17.4",
+    "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.8",
     "html-webpack-plugin": "^2.30.1",
     "style-loader": "^0.19.1"
