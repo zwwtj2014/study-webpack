@@ -1,0 +1,19 @@
+{
+  "name": "webpack-guide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/lodash": "^4.14.92",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
